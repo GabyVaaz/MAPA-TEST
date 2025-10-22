@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Map 4748</title>
-    <link rel="stylesheet" href="style.css">
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
@@ -21,16 +20,74 @@
       align-items: center;     
       height: 100vh;            
     }
+    
     #mapCH {
       width: 800px;             
       height: 450px;            
     }
+
+    .form-container {
+      background-color: #b41a1a;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 320px;
+      text-align: center;
+    }
+
+    .form-container h2 {
+      color: #00796b;
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+
+    .form-container label {
+      display: block;
+      color: #333;
+      font-weight: 500;
+      margin-bottom: 8px;
+      text-align: left;
+    }
+
+    .form-container select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      font-size: 15px;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    .form-container select:focus {
+      border-color: #00796b;
+      background-color: #ffffff;
+      box-shadow: 0 0 5px rgba(0, 121, 107, 0.3);
+    }
+    
   </style>
 </head>
-    <div class="map-container">
-        <div id="mapCH"></div>
+
+<body>
+      <div class="form-container">
+      <h2>form de Doenças</h2>
+      <label for="doenca">Selecione uma doença:</label>
+      <select id="doenca">
+        <option value="">Selecione uma Doença</option>
+        <option value="alzheimer_id">Alzheimer</option>
+        <option value="asma_id">Asma</option>
+        <option value="dengue_id">Dengue</option>
+        <option value="diabetes_id">Diabetes</option>
+        <option value="hipertensao_id">Hipertensão</option>
+        <option value="hiv_id">HIV</option>
+        <option value="parkinson_id">Parkinson</option>
+      </select>
     </div>
 
+    <div class="map-container">
+      <div id="mapCH"></div>
+    <div>
     <script src="script.js"></script>
 </body>
 </html>
